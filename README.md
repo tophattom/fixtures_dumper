@@ -18,6 +18,10 @@ Or install it yourself as:
 
     $ gem install fixtures_dumper
 
+## Supported Rails Versions
+
+Rails 3.2.x and Rails 4.x
+
 ## Usage
 
 ``` ruby
