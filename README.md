@@ -23,6 +23,7 @@ Or install it yourself as:
 ``` ruby
 rake db:fixtures:dump # Dump data in all the tables to fixtures
 rake db:fixtures:dump TABLE=foo # Dump data from `foo` to its fixture file
+rake db:fixtures:dump RAILS_ENV=test # Dump data from test database to fixtures
 ```
 
 ## Contributing
