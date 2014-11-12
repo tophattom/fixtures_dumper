@@ -2,6 +2,8 @@
 
 Dump data from development or test database to fixtures easily.
 
+[![Gem Version](https://badge.fury.io/rb/fixtures_dumper.svg)](http://badge.fury.io/rb/fixtures_dumper)
+
 ## Installation
 
 Add this line to your application's Gemfile:
