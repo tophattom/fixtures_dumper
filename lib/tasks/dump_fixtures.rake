@@ -57,9 +57,3 @@ namespace :db do
     end
   end
 end
-
-# USAGE:
-# To dump all fixtures
-# bundle exec rake db:dump_fixtures
-# To dump specific fixture
-# bundle exec rake db:dump_fixtures TABLE=foo

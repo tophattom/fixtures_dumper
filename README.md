@@ -1,6 +1,6 @@
 # FixturesDumper
 
-TODO: Write a gem description
+Dump data from development or test database to fixtures easily.
 
 ## Installation
 
@@ -20,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ruby
+rake db:fixtures:dump # Dump data in all the tables to fixtures
+rake db:fixtures:dump TABLE=foo # Dump data from `foo` to its fixture file
+```
 
 ## Contributing
 
