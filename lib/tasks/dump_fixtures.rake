@@ -4,8 +4,13 @@ namespace :db do
 
     task :dump => :environment do
 
-      FIXTURES_PATH = "#{Rails.root}/test/fixtures"
       TABLES_TO_BE_EXCLUDED = %w(schema_migrations delayed_jobs)
+
+      fixtures_path = if ENV['FIXTURES_PATH']
+                        File.join(Rails.root, ENV['FIXTURES_PATH'])
+                      else
+                        File.join(Rails.root, 'test', 'fixtures')
+                      end
 
       connection = ActiveRecord::Base.connection
 
@@ -36,7 +41,7 @@ namespace :db do
               result << { "#{table.singularize}_#{record.id}" => record.attributes }
             end
 
-            fixture_file = FIXTURES_PATH + "/#{table}.yml"
+            fixture_file = fixtures_path + "/#{table}.yml"
 
             puts "Dumping #{data.count} records in #{table}.yml"
 
