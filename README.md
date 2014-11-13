@@ -1,6 +1,6 @@
 # FixturesDumper
 
-Dump data from development or test database to fixtures easily.
+Dump data from development or test database to create fixtures easily.
 
 [![Gem Version](https://badge.fury.io/rb/fixtures_dumper.svg)](http://badge.fury.io/rb/fixtures_dumper)
 
@@ -27,13 +27,20 @@ Rails 3.2.x and Rails 4.x
 ## Usage
 
 ``` ruby
-rake db:fixtures:dump # Dump data in all the tables to fixtures
-rake db:fixtures:dump TABLE=foo # Dump data from `foo` to its fixture file
-rake db:fixtures:dump RAILS_ENV=test # Dump data from test database to fixtures
+# Dump data in all the tables to fixtures
+rake db:fixtures:dump
+ 
+# Dump data from `foo` to its fixture file
+rake db:fixtures:dump TABLE=foo
+ 
+# Dump data from test database to fixtures 
+rake db:fixtures:dump RAILS_ENV=test 
 ```
-## Output
+
+## Example
 
 ```
+$ rake db:fixtures:dump TABLE=users
 $ cat users.yml
 user_1:
   id: 1
