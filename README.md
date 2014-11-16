@@ -29,12 +29,12 @@ Rails 3.2.x and Rails 4.x
 ``` ruby
 # Dump data in all the tables to fixtures
 rake db:fixtures:dump
- 
+
 # Dump data from `foo` to its fixture file
 rake db:fixtures:dump TABLE=foo
- 
-# Dump data from test database to fixtures 
-rake db:fixtures:dump RAILS_ENV=test 
+
+# Dump data from test database to fixtures
+rake db:fixtures:dump RAILS_ENV=test
 ```
 
 ## Example
@@ -70,3 +70,7 @@ user_1:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+#### Brought to you by
+
+![BigBinary](http://bigbinary.com/assets/common/logo.png)
