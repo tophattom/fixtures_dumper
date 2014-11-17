@@ -2,6 +2,7 @@
 
 Dump data from development or test database to create fixtures easily.
 
+[![Circle CI](https://circleci.com/gh/bigbinary/fixtures_dumper.png?style=badge)](https://circleci.com/gh/bigbinary/fixtures_dumper)
 [![Gem Version](https://badge.fury.io/rb/fixtures_dumper.svg)](http://badge.fury.io/rb/fixtures_dumper)
 
 ## Installation
