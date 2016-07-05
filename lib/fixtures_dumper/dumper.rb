@@ -57,8 +57,7 @@ module FixturesDumper
           begin
             model = "#{Kernel.const_get(const)}::#{model_name}".constantize
             return model.unscoped
-          rescue
-            next
+          rescue Execption
           end
         end
 
