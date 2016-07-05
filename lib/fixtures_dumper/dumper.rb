@@ -47,10 +47,21 @@ module FixturesDumper
     end
 
     def data_from_table(table_name)
+      model_name = table_name.singularize.camelize.constantize
       begin
-        model = table_name.singularize.camelize.constantize
+        model = model_name
         model.unscoped
       rescue NameError => ex
+        # Try to find the model from a namespace
+        Object.constants.each do |const|
+          begin
+            model = "#{Kernel.const_get(const)}::#{model_name}".constantize
+            return model.unscoped
+          rescue NameError
+            next
+          end
+        end
+
         # NameError will be raised if the constant for the table_name
         # is not found. This will happen with those tables for which
         # model is not defined. In this case, the table can be ignored
