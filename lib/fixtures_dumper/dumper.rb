@@ -47,9 +47,9 @@ module FixturesDumper
     end
 
     def data_from_table(table_name)
-      model_name = table_name.singularize.camelize.constantize
+      model_name = table_name.singularize.camelize
       begin
-        model = model_name
+        model = model_name.constantize
         model.unscoped
       rescue NameError => ex
         # Try to find the model from a namespace
